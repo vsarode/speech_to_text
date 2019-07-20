@@ -4,7 +4,6 @@ import os
 import speech_recognition as sr
 from flask import request
 from flask_restful import Resource
-from werkzeug import secure_filename
 
 UPLOAD_FOLDER = '/tmp/'
 
@@ -30,16 +29,15 @@ def find(pattern, path):
 
 
 class SpeechToText(Resource):
-    def post(self):
-        # file = request.files['file']
-        # if file:
-        # filename = secure_filename(file.filename)
-        # file.save(os.path.join(UPLOAD_FOLDER, filename))
-        files = find('*.wav', UPLOAD_FOLDER)
+    def get(self):
+        args = request.args
+        file = args['files']
         response = {}
-        for filename in files:
-            file = open(os.path.join(UPLOAD_FOLDER, filename))
-            response[filename.split('/')[-1]] = get_test_from_speech(file)
-        return {"text": response}
+        searched_files = find('*' + file + '*', UPLOAD_FOLDER)
+        if searched_files:
 
-    authenticated = False
+            file = open(os.path.join(UPLOAD_FOLDER, searched_files[0]))
+            response[searched_files[0].split('/')[-1]] = get_test_from_speech(file)
+            return {"text": response}
+
+    get.authenticated = False
