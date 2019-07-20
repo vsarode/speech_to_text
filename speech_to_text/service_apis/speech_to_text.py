@@ -1,3 +1,4 @@
+import fnmatch
 import os
 
 import speech_recognition as sr
@@ -19,17 +20,26 @@ def get_test_from_speech(file):
     return text
 
 
+def find(pattern, path):
+    result = []
+    for root, dirs, files in os.walk(path):
+        for name in files:
+            if fnmatch.fnmatch(name, pattern):
+                result.append(os.path.join(root, name))
+    return result
+
+
 class SpeechToText(Resource):
     def post(self):
-        print "innnnnnnn"
-        file = request.files['file']
-        import pdb; pdb.set_trace()
-        if file:
-            filename = secure_filename(file.filename)
-            file.save(os.path.join(UPLOAD_FOLDER, filename))
+        # file = request.files['file']
+        # if file:
+        # filename = secure_filename(file.filename)
+        # file.save(os.path.join(UPLOAD_FOLDER, filename))
+        files = find('*.wav', UPLOAD_FOLDER)
+        response = {}
+        for filename in files:
             file = open(os.path.join(UPLOAD_FOLDER, filename))
-            res = get_test_from_speech(file)
-            print res
-            return {"text": res}
+            response[filename.split('/')[-1]] = get_test_from_speech(file)
+        return {"text": response}
 
     authenticated = False
