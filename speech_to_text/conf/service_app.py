@@ -17,4 +17,4 @@ api.add_resource(Uplaod, 'upload')
 api.add_resource(SpeechToText, 'speechtotext')
 
 if __name__ == '__main__':
-    app.run(host='192.168.0.115', port=9002, debug=True)
+    app.run(host='localhost', port=9999, debug=True)
