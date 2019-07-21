@@ -10,11 +10,11 @@ app = Flask(__name__)
 # App Global varialbls
 app.SEND_SMS = False
 
-api = Api(app, prefix='/sttext/')
+api = Api(app, prefix='/GeoVideoApplication/')
 
 api.add_resource(Ping, 'ping/')
 api.add_resource(Uplaod, 'upload')
-api.add_resource(SpeechToText, 'check')
+api.add_resource(SpeechToText, 'speechtotext')
 
 if __name__ == '__main__':
-    app.run(host='localhost', port=9002, debug=True)
+    app.run(host='192.168.0.115', port=9002, debug=True)
