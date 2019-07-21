@@ -14,7 +14,7 @@ api = Api(app, prefix='/GeoVideoApplication/')
 
 api.add_resource(Ping, 'ping/')
 api.add_resource(Uplaod, 'upload')
-api.add_resource(SpeechToText, 'speechtotext')
+api.add_resource(SpeechToText, 'test')
 
 if __name__ == '__main__':
     app.run(host='localhost', port=9999, debug=True)

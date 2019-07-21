@@ -57,7 +57,7 @@ def printit(filterfile=""):
 
 
 class SpeechToText(Resource):
-    def post(self):
+    def get(self):
         args = request.args
         files = args['files']
         responseFinal = printit(files)
