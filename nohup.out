@@ -1,0 +1,66 @@
+ * Serving Flask app "service_app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://localhost:9999/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 117-343-704
+127.0.0.1 - - [21/Jul/2019 18:38:17] "POST /GeoVideoApplication/upload HTTP/1.0" 400 -
+127.0.0.1 - - [21/Jul/2019 18:38:25] "POST /GeoVideoApplication/upload HTTP/1.0" 200 -
+127.0.0.1 - - [21/Jul/2019 18:38:38] "GET /GeoVideoApplication/test?files=male HTTP/1.0" 404 -
+127.0.0.1 - - [21/Jul/2019 18:40:06] "GET /GeoVideoApplication/speechtotext?files=male HTTP/1.0" 405 -
+ * Detected change in '/home/vitthals/speech_to_text/speech_to_text/conf/service_app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 117-343-704
+ * Serving Flask app "service_app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://localhost:9999/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 117-343-704
+127.0.0.1 - - [21/Jul/2019 18:45:28] "POST /GeoVideoApplication/ping/ HTTP/1.0" 200 -
+127.0.0.1 - - [21/Jul/2019 18:45:30] "POST /GeoVideoApplication/ping/ HTTP/1.0" 200 -
+127.0.0.1 - - [21/Jul/2019 18:48:06] "POST /GeoVideoApplication/ping/ HTTP/1.0" 200 -
+127.0.0.1 - - [21/Jul/2019 18:48:26] "POST /GeoVideoApplication/upload HTTP/1.0" 200 -
+127.0.0.1 - - [21/Jul/2019 18:48:49] "GET /GeoVideoApplication/test?files=male3 HTTP/1.0" 200 -
+127.0.0.1 - - [21/Jul/2019 19:32:32] "POST /GeoVideoApplication/upload HTTP/1.0" 200 -
+127.0.0.1 - - [21/Jul/2019 19:32:32] "POST /GeoVideoApplication/upload HTTP/1.0" 200 -
+127.0.0.1 - - [21/Jul/2019 19:32:32] "POST /GeoVideoApplication/test?files=1563737479357 HTTP/1.0" 405 -
+127.0.0.1 - - [21/Jul/2019 19:33:15] "POST /GeoVideoApplication/upload HTTP/1.0" 200 -
+127.0.0.1 - - [21/Jul/2019 19:33:17] "POST /GeoVideoApplication/upload HTTP/1.0" 200 -
+127.0.0.1 - - [21/Jul/2019 19:33:18] "POST /GeoVideoApplication/test?files=1563737479357 HTTP/1.0" 405 -
+127.0.0.1 - - [21/Jul/2019 19:33:50] "POST /GeoVideoApplication/upload HTTP/1.0" 200 -
+127.0.0.1 - - [21/Jul/2019 19:33:50] "POST /GeoVideoApplication/upload HTTP/1.0" 200 -
+127.0.0.1 - - [21/Jul/2019 19:33:50] "POST /GeoVideoApplication/test?files=1563737479357 HTTP/1.0" 405 -
+127.0.0.1 - - [21/Jul/2019 19:34:44] "POST /GeoVideoApplication/upload HTTP/1.0" 200 -
+127.0.0.1 - - [21/Jul/2019 19:34:45] "POST /GeoVideoApplication/upload HTTP/1.0" 200 -
+127.0.0.1 - - [21/Jul/2019 19:34:45] "POST /GeoVideoApplication/test?files=1563737479357 HTTP/1.0" 405 -
+127.0.0.1 - - [21/Jul/2019 19:45:25] "GET /GeoVideoApplication/test?files=male3 HTTP/1.0" 200 -
+127.0.0.1 - - [21/Jul/2019 19:49:47] "GET /GeoVideoApplication/test?files=male HTTP/1.0" 200 -
+127.0.0.1 - - [21/Jul/2019 20:20:48] "POST /GeoVideoApplication/upload HTTP/1.0" 200 -
+127.0.0.1 - - [21/Jul/2019 20:20:51] "POST /GeoVideoApplication/upload HTTP/1.0" 200 -
+127.0.0.1 - - [21/Jul/2019 20:20:52] "POST /GeoVideoApplication/test?files=1563740273341 HTTP/1.0" 405 -
+127.0.0.1 - - [21/Jul/2019 20:22:09] "POST /GeoVideoApplication/upload HTTP/1.0" 200 -
+127.0.0.1 - - [21/Jul/2019 20:22:09] "POST /GeoVideoApplication/upload HTTP/1.0" 200 -
+127.0.0.1 - - [21/Jul/2019 20:22:10] "POST /GeoVideoApplication/test?files=1563740273341 HTTP/1.0" 405 -
+127.0.0.1 - - [22/Jul/2019 00:34:14] "POST /GeoVideoApplication/upload HTTP/1.0" 200 -
+127.0.0.1 - - [22/Jul/2019 00:34:15] "POST /GeoVideoApplication/upload HTTP/1.0" 200 -
+127.0.0.1 - - [22/Jul/2019 00:34:15] "POST /GeoVideoApplication/test?files=1563737479357 HTTP/1.0" 405 -
+127.0.0.1 - - [22/Jul/2019 05:44:48] "POST /GeoVideoApplication/upload HTTP/1.0" 200 -
+127.0.0.1 - - [22/Jul/2019 05:44:49] "POST /GeoVideoApplication/upload HTTP/1.0" 200 -
+127.0.0.1 - - [22/Jul/2019 05:44:49] "POST /GeoVideoApplication/test?files=1563737479357 HTTP/1.0" 405 -
+ * Detected change in '/home/vitthals/speech_to_text/speech_to_text/service_apis/speech_to_text.py', reloading
+ * Restarting with stat
+Traceback (most recent call last):
+  File "/home/vitthals/speech_to_text/speech_to_text/conf/service_app.py", line 5, in <module>
+    from speech_to_text.service_apis.speech_to_text import SpeechToText
+  File "/home/vitthals/speech_to_text/speech_to_text/service_apis/speech_to_text.py", line 32
+    fpathlist = fileName.split("\")
+                                  ^
+SyntaxError: EOL while scanning string literal

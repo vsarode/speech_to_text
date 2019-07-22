@@ -29,13 +29,13 @@ def printit(filterfile=""):
     if (len(filenames) > 0):
         for index in range(len(filenames)):
             fileName = filenames[index]
-            fpathlist = fileName.split("\\")
+            fpathlist = fileName.split("/")
             files = fpathlist[len(fpathlist) - 1]
             fnamelist = files.split("_")
             if (filterfile in files):
                 fdata = fdata + files + ":"
                 r = sr.Recognizer()
-                audio = UPLOAD_FOLDER + files
+                audio =  files
                 with sr.AudioFile(audio) as source:
                     audio = r.record(source)
                 try:
