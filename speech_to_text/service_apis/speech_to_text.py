@@ -35,7 +35,7 @@ def printit(filterfile=""):
             if (filterfile in files):
                 fdata = fdata + files + ":"
                 r = sr.Recognizer()
-                audio =  files
+                audio =  UPLOAD_FOLDER+files
                 with sr.AudioFile(audio) as source:
                     audio = r.record(source)
                 try:
@@ -57,7 +57,7 @@ def printit(filterfile=""):
 
 
 class SpeechToText(Resource):
-    def get(self):
+    def post(self):
         args = request.args
         files = args['files']
         responseFinal = printit(files)
